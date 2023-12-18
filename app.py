@@ -1,6 +1,15 @@
 import streamlit as st
 import random
 
+st.set_page_config(page_title="The Magic Eye"
+                   , page_icon="👀"
+                   , layout="centered"
+                   #, initial_sidebar_state="auto"
+                   , menu_items={
+        'Get Help': 'https://github.com/slebedeva/the_magic_eye',
+        'Report a bug': "https://github.com/slebedeva/the_magic_eye/issues",
+        'About': "This is a digital copy of a physical all seeing Eye. All rights reserved for the original designer. No liability for consequence of predictions."
+    })
 
 @st.cache(ttl=3600) # the Eye will remember its answer for 1 hour
 def answer(question):
